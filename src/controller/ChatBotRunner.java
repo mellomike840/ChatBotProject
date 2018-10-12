@@ -9,8 +9,4 @@ public class ChatBotRunner
 		app.start();
 	}
 	
-	
-	
-	
-	
 }

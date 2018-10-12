@@ -9,8 +9,6 @@ public class ChatBotController
 		String userInput = JOptionPane.showInputDialog("What is your name?");
 		interactWithChatBot(userInput);
 		
-		
-		
 	}
 	
 	
