@@ -5,7 +5,6 @@ public class BotConstructor
 	private String botName;
 	
 	
-	
 	//---------------------------------------------------------
 	public BotConstructor()
 	{
