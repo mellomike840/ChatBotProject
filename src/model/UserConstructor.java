@@ -14,7 +14,6 @@ public class UserConstructor
 		//default constructor
 	}
 	
-	
 	public UserConstructor(String userName, String userAge)
 	{
 		this.userName = userName;
