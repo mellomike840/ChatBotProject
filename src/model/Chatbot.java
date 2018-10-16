@@ -32,16 +32,38 @@ public class Chatbot
 		
 		responseList.add("Hello! How are you?");
 		responseList.add("Ay whats poppin b");
-		
+		responseList.add("Yeet");
+		responseList.add("Hi");
+		responseList.add("Hello");
+		responseList.add("WOW");
+		responseList.add("OKay");
+		responseList.add("...");
+		responseList.add("YOu are Dumb");
+		responseList.add("How Boring");
 		
 		spookyList.add("We are the Knights who say Nee!");
 		spookyList.add("McDonalds");
+		spookyList.add("Boo");
+		spookyList.add("Danny Elfman");
+		spookyList.add("You are living a lie");
+		spookyList.add("Nobody loves you");
+		spookyList.add("Obama is gone");
+		spookyList.add("1 Spider");
+		spookyList.add("...         AHHHHHHHHH!");
+		spookyList.add("YOu are getting deported");
 		
 	}
 	
 	
 	
-	
+	public String processText(String userText)
+	{
+		String answer = "";
+		
+		answer = "You said your name is " + userText;
+		
+		return answer;
+	}
 	
 	
 	
