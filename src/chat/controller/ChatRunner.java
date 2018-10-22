@@ -1,12 +1,12 @@
-package controller;
+package chat.controller;
 
-public class ChatBotRunner
+public class ChatRunner
 {
 
 	//main method runs first when program is started 
 	public static void main(String [] args)
 	{
-		ChatBotController app = new ChatBotController();
+		ChatController app = new ChatController();
 		app.start();
 	}
 	

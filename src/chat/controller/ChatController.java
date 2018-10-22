@@ -1,18 +1,19 @@
-package controller;
+package chat.controller;
 
 import javax.swing.JOptionPane;
-import model.UserConstructor;
-import model.Chatbot;
+
+import chat.model.Chatbot;
+import chat.model.UserConstructor;
 
 
-public class ChatBotController
+public class ChatController
 {
 	//Data member declaration section
 	private UserConstructor user;
 	private Chatbot bot;
 	
 	//-------------------------------------------------------------
-	public ChatBotController()
+	public ChatController()
 	{
 		//instances of constructors, data member initialization 
 		user = new UserConstructor();
@@ -59,4 +60,28 @@ public class ChatBotController
 	
 	
 	
+	
+	
+	
+	public Chatbot getChatbot()
+	{
+		return bot;
+	}
+	
+	
+	public String useChatbotCheckers(String ListNameSubString)
+	{
+		//returns the list with the passed subString 
+		
+		String list = "";
+		//String list = bot.spookyList.get(bot.spookyList.size());
+		
+		for(int i = 0; i < bot.spookyList.size(); i++)
+		{
+			list = list + bot.spookyList.get(i);
+		}
+		
+		return list;
+		
+	}
 }

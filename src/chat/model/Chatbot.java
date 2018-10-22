@@ -1,11 +1,11 @@
-package model;
+package chat.model;
 
 import java.util.ArrayList;
 
 public class Chatbot
 {
 
-	private ArrayList<String> spookyList;
+	public ArrayList<String> spookyList;
 	private ArrayList<String> responseList;
 	
 	private String content;
@@ -51,9 +51,11 @@ public class Chatbot
 		spookyList.add("1 Spider");
 		spookyList.add("...         AHHHHHHHHH!");
 		spookyList.add("YOu are getting deported");
+		spookyList.add("Halloween");
 		
 	}
 	
+
 	
 	
 	public String processText(String userText)
@@ -65,6 +67,26 @@ public class Chatbot
 		return answer;
 	}
 	
+	
+	public void getContent()
+	{
+		
+	}
+	
+	public String getSpookyList()
+	{
+		
+	}
+	
+	public String getResponseList()
+	{
+		
+	}
+	
+	public String getCurrentUser()
+	{
+		
+	}
 	
 	
 }
