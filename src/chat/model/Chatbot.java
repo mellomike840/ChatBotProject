@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Chatbot
 {
 
-	public ArrayList<String> spookyList;
+	private ArrayList<String> spookyList;
 	private ArrayList<String> responseList;
 	
 	private String content;
@@ -75,18 +75,59 @@ public class Chatbot
 	
 	public String getSpookyList()
 	{
-		
+		return null;
 	}
 	
 	public String getResponseList()
 	{
-		
+		return null;
 	}
 	
 	public String getCurrentUser()
 	{
+		return null;
+	}
+	
+	
+	public boolean legitimacyChecker(String test)
+	{
+		boolean legit = true;
+		
+		if(test == null)
+		{
+			legit = false;
+		}
+		else if(test.length() <= 1)
+		{
+			legit = false;
+		}
+		else if(test.contains("asdf") || test.contains("jkl") || test.contains("cvb"))
+		{
+			legit = false;
+		}
+		else
+		{
+			legit = true;
+		}
+		
+		return legit;
 		
 	}
 	
+	public String useChatbotCheckers(String ListNameSubString)
+	{
+		//returns the list with the passed subString 
+		
+		String list = "";
+		//String list = bot.spookyList.get(bot.spookyList.size());
+		
+		for(int i = 0; i < spookyList.size(); i++)
+		{
+			list = list + spookyList.get(i);
+		}
+		
+		return list;
+		
+	}
 	
 }

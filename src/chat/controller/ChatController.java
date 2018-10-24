@@ -57,31 +57,10 @@ public class ChatController
 	
 	
 	
-	
-	
-	
-	
-	
-	
 	public Chatbot getChatbot()
 	{
 		return bot;
 	}
 	
 	
-	public String useChatbotCheckers(String ListNameSubString)
-	{
-		//returns the list with the passed subString 
-		
-		String list = "";
-		//String list = bot.spookyList.get(bot.spookyList.size());
-		
-		for(int i = 0; i < bot.spookyList.size(); i++)
-		{
-			list = list + bot.spookyList.get(i);
-		}
-		
-		return list;
-		
-	}
 }
