@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import chat.model.Chatbot;
 import chat.model.UserConstructor;
+import java.util.ArrayList;
 
 
 public class ChatController
@@ -17,7 +18,7 @@ public class ChatController
 	{
 		//instances of constructors, data member initialization 
 		user = new UserConstructor();
-		bot = new Chatbot();
+		bot = new Chatbot("my chatbot");
 	}
 	
 	
@@ -61,6 +62,12 @@ public class ChatController
 	{
 		return bot;
 	}
+	
+	public ArrayList<String> useChatbotCheckers(String word)
+	{
+		return bot.getSpookyList();
+	}
+	
 	
 	
 }

@@ -15,7 +15,7 @@ public class ChabotTest
 	@Before
 	public void setUp() throws Exception
 	{
-		testedBot = new Chatbot();
+		testedBot = new Chatbot("this is the tested chatbot");
 		
 	}
 
