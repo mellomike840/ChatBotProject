@@ -186,8 +186,8 @@ public class Chatbot
 	public boolean contentChecker(String contentCheck)
 	{
 		
-		
-		if(contentCheck.equals("text" + getContent() + "text") || contentCheck.equals("text" + getContent()) || contentCheck.equals(getContent() + "text") )
+		//or if(contentCheck.equals("text" + getContent() + "text") || contentCheck.equals("text" + getContent()) || contentCheck.equals(getContent() + "text") )
+		if(contentCheck.contains("text"))
 		{
 			return false;
 		}
