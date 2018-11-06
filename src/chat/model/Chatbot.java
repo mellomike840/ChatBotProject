@@ -27,27 +27,11 @@ public class Chatbot
 		this.joke = new String("What did the elephant say to the chicken?");
 		this.content = new String(content);
 		this.currentUser = new String("This is the default user ");
-		
+	
 		this.responseList = new ArrayList<String>();
 		this.spookyList = new ArrayList<String>();
-		
-		
-		
-		
-		
-		
-		
-
+	
 		buildTheLists();
-
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 	
 	
@@ -72,30 +56,17 @@ public class Chatbot
 		responseList.add("this is a reponse out of a list");
 		responseList.add("this is a reponse out of a list");
 		
-		/*
-		spookyList.add("We are the Knights who say Nee!");
-		spookyList.add("McDonalds");
-		spookyList.add("Boo");
-		spookyList.add("Danny Elfman");
-		spookyList.add("You are living a lie");
-		spookyList.add("Nobody loves you");
-		spookyList.add("Obama is gone");
-		spookyList.add("1 Spider");
-		spookyList.add("...         AHHHHHHHHH!");
-		spookyList.add("YOu are getting deported");
-		spookyList.add("Halloween");
-		*/
 		
-		
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
-		spookyList.add("Halloween");
+		spookyList.add("We are the Knights who say Nee! Halloween");
+		spookyList.add("McDonalds Halloween");
+		spookyList.add("Boo Halloween");
+		spookyList.add("Danny Elfman Halloween");
+		spookyList.add("You are living a lie Halloween");
+		spookyList.add("Nobody loves you Halloween");
+		spookyList.add("Obama is gone Halloween");
+		spookyList.add("1 Spider Halloween");
+		spookyList.add("...         AHHHHHHHHH! Halloween");
+		spookyList.add("YOu are getting deported Halloween");
 		spookyList.add("Halloween");
 		spookyList.add("Halloween");
 		spookyList.add("Halloween");
@@ -174,29 +145,31 @@ public class Chatbot
 
 	public boolean spookyChecker(String word)
 	{
-		if(word.contains("Easter"))
+		
+		if(word.contains("Halloween"))
 		{
-			return false;
-		}
-		else
 			return true;
+		}
+		for(String spookyString:spookyList)
+		{
+			if(word.contains(spookyString))
+			{
+				return true;
+			}
+		}
+		return false;
+		
 	}
 
 
 	public boolean contentChecker(String contentCheck)
 	{
-		
-		//or if(contentCheck.equals("text" + getContent() + "text") || contentCheck.equals("text" + getContent()) || contentCheck.equals(getContent() + "text") )
 		if(contentCheck.contains("text"))
 		{
 			return false;
 		}
 		else
 			return true;
-		
-		
-		
-		
 	}
 	
 	

@@ -42,18 +42,26 @@ public class ChatController
 	
 	public String interactWithChatbot(String userInput)
 	{
-		userInput = JOptionPane.showInputDialog("What is your name?");
-		if(!userInput.equals("quit"))
+		if(userInput == null)
 		{
-			user.setUserName(userInput);
-			JOptionPane.showMessageDialog(null, bot.processText(userInput));
+			return "you entered null";
 		}
-		else if(userInput.equals("quit"))
+		else 
 		{
-			JOptionPane.showMessageDialog(null, "Goodbye " + user.getUserName());
+			userInput = JOptionPane.showInputDialog("What is your name?");
+			if(!userInput.equals("quit"))
+			{
+				user.setUserName(userInput);
+				JOptionPane.showMessageDialog(null, bot.processText(userInput));
+			}
+			else if(userInput.equals("quit"))
+			{
+				JOptionPane.showMessageDialog(null, "Goodbye " + user.getUserName());
+			}
+			
+			return userInput;
 		}
 		
-		return userInput;
 	}
 	
 	
