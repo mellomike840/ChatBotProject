@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 import chat.model.Chatbot;
 import chat.model.UserConstructor;
 import java.util.ArrayList;
+import chat.view.ChatFrame;
+import chat.view.ChatPanel;
 
 
 public class ChatController
@@ -12,7 +14,7 @@ public class ChatController
 	//Data member declaration section
 	private UserConstructor user;
 	private Chatbot bot;
-	
+	private ChatFrame appFrame;
 	
 	
 	//-------------------------------------------------------------
@@ -21,6 +23,7 @@ public class ChatController
 		//instances of constructors, data member initialization 
 		user = new UserConstructor();
 		bot = new Chatbot("my chatbot");
+		appFrame = new ChatFrame(this);
 	}
 	
 	
