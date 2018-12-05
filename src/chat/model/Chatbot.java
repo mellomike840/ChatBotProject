@@ -78,8 +78,12 @@ public class Chatbot
 	
 	// int randomIndex = (int)(Math.random() * responseList.size());
 	
-	public String processText(String userInput)
+	public String processText(String userText)
 	{
+		
+		
+		/*
+		
 	
 		String answer = "You said: " + userInput + "\n" + "Chatbot says: ";
 		
@@ -91,19 +95,30 @@ public class Chatbot
 		{
 			answer = answer + "You said the special words";
 		}
-		
-		/*
-		else
-		{
-			int randomIndex = (int)(Math.random() * responseList.size());
-					
-			answer = answer + responseList.get(randomIndex);		
-		}
+		return answer;
 		*/
 		
-		
-			return answer;
-		
+			
+		String answer = "";
+			
+		if (!legitimacyChecker(userText))
+		{				
+			answer += "You really should not send null\n";
+		}
+		else
+		{
+			answer += "You said: " + userText + "\n";
+				
+			if (contentChecker(userText))
+			{
+				answer += "You said the special words.\n";
+			}
+			int randomIndex = (int) (responseList.size() * Math.random());
+			answer += "Chatbot says: " + responseList.get(randomIndex) + "\n";
+		}
+			
+		return answer;
+			
 
 	}
 	

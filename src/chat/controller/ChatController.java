@@ -28,12 +28,16 @@ public class ChatController
 	//-------------------------------------------------------------
 	public void start()
 	{
+		/*
 		String userInput = "";
 		//loops until userInput is "quit"
 		while(!userInput.equals("quit"))
 		{
 			userInput = interactWithChatbot(userInput);
 		}
+		*/
+		
+		
 		
 	}
 	
@@ -42,27 +46,33 @@ public class ChatController
 	
 	
 	
-	public String interactWithChatbot(String userInput)
+	public String interactWithChatbot(String text)
 	{
-		if(userInput == null)
+		/*
+		if(text == null)
 		{
 			return "you entered null";
 		}
 		else 
 		{
-			userInput = JOptionPane.showInputDialog("What is your name?");
-			if(!userInput.equals("quit"))
+			text = JOptionPane.showInputDialog("What is your name?");
+			if(!text.equals("quit"))
 			{
 				user.setUserName(userInput);
 				JOptionPane.showMessageDialog(null, bot.processText(userInput));
 			}
-			else if(userInput.equals("quit"))
+			else if(text.equals("quit"))
 			{
 				JOptionPane.showMessageDialog(null, "Goodbye " + user.getUserName());
 			}
 			
-			return userInput;
+			return text;
 		}
+		*/
+		
+		String output = "";
+		output += bot.processText(text);
+		return output;
 		
 	}
 	
