@@ -13,6 +13,8 @@ public class ChatController
 	private UserConstructor user;
 	private Chatbot bot;
 	
+	
+	
 	//-------------------------------------------------------------
 	public ChatController()
 	{

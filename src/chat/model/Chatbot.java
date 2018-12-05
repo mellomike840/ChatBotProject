@@ -75,6 +75,9 @@ public class Chatbot
 	
 
 	
+	
+	// int randomIndex = (int)(Math.random() * responseList.size());
+	
 	public String processText(String userInput)
 	{
 	
@@ -88,6 +91,15 @@ public class Chatbot
 		{
 			answer = answer + "You said the special words";
 		}
+		
+		/*
+		else
+		{
+			int randomIndex = (int)(Math.random() * responseList.size());
+					
+			answer = answer + responseList.get(randomIndex);		
+		}
+		*/
 		
 		
 			return answer;
