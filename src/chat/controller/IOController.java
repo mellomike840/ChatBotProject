@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.File;
 import java.io.PrintWriter;
 
-public class IOContoller
+public class IOController
 {
 	public static void saveText(ChatController app, String path, String textToSave)
 	{
@@ -15,6 +15,7 @@ public class IOContoller
 			String filename = path;
 			Calendar date = Calendar.getInstance();
 			filename += "/" + date.get(Calendar.MONTH) + " " + date.get(Calendar.DAY_OF_MONTH);
+			filename += date.get(Calendar.HOUR) + "-" + date.get(Calendar.MINUTE);
 			filename += " chatbot save.txt";
 			
 			File saveFile = new File(filename);
@@ -32,12 +33,39 @@ public class IOContoller
 		}
 		catch(IOException error)
 		{
-			app.handleErrors(errors);
+			app.handleErrors(error);
 		}
 		catch(Exception genericError)
 		{
 			app.handleErrors(genericError);
 		}
+	}
+	
+	public static String loadFile(ChatController app, String path)
+	{
+		String contents = "";
+		try 
+		{
+			File saveFile = new File(path);
+			Scanner fileScanner;
+			if(saveFile.exists())
+			{
+				fileScanner = new Scanner(saveFile);
+				while (fileScanner.hasNext())
+				{
+					contents += fileScanner.nextLine() + "\n";
+				}
+			}
+		}
+		catch(IOException error)
+		{
+			app.handleErrors(error);
+		}
+		catch(Exception genericError)
+		{
+			app.handleErrors(genericError);
+		}
+		return contents;
 	}
 	
 
