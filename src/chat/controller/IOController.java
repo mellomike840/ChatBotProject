@@ -2,6 +2,9 @@ package chat.controller;
 
 import java.util.Calendar;
 import java.util.Scanner;
+
+import javax.swing.JFileChooser;
+
 import java.io.IOException;
 import java.io.File;
 import java.io.PrintWriter;

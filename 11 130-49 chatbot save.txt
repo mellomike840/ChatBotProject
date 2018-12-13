@@ -1,0 +1,16 @@
+Chat AreaYou said: Talk to bot herefgh
+You said the special words.
+Chatbot says: dang
+You really should not send null
+You said: dfgh
+You said the special words.
+Chatbot says: yo thats pretty coool
+You said: dfgh
+You said the special words.
+Chatbot says: yo thats pretty coool
+You said: dfghdfgh
+You said the special words.
+Chatbot says: this is a reponse out of a list
+You said: dfghdfgh
+You said the special words.
+Chatbot says: dang
